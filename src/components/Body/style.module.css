@@ -2,6 +2,8 @@
     height: 400px;
     display: flex;
     justify-content: center;
+    border-left: 2px solid #DAE0FB;
+    border-right: 2px solid #DAE0FB;
 }
 .empty-container {
     align-self: center;

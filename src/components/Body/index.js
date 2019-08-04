@@ -6,7 +6,7 @@ const Body = () => {
   return (
     <div className={styles.bodyContainer}>
       <div className={styles.emptyContainer}>
-        <img src={EmptyTodo} alt="empty-todo-image"/>
+        <img src={EmptyTodo} alt="empty-todo"/>
         <p className={styles.emptyContainerMainText}>Hurray, no pending tasks!</p>
         <p className={styles.emptyContainerSubText}>Add a new task below</p>
       </div>

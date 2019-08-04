@@ -1,0 +1,30 @@
+.footer-container {
+    height: 96px;
+    background: #DAE0FB;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    display: flex;
+    padding: 20px 32px;
+}
+.todo-input {
+    height: 56px;
+    width: 388px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: none;
+    outline: 0;
+    font-size: 16px;
+    padding: 17px;
+}
+.todo-submit-button {
+    width: 100px;
+    height: 56px;
+    color: #ffffff;
+    background: #8499F0;
+    border: none;
+    outline: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 36px;
+    padding: 0;
+}
