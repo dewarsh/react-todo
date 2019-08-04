@@ -29,3 +29,6 @@
     font-size: 36px;
     padding: 0;
 }
+.todo-submit-button:disabled {
+    cursor: not-allowed;
+}

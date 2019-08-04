@@ -6,39 +6,21 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    todolist: [],
-    currentTodo: ""
+    todolist: []
   };
 
-  setCurrentTodo = e => {
+  onTodoSubmit = value => {
     this.setState({
-      currentTodo: e.target.value
-    });
-  };
-
-  onTodoSubmit = () => {
-    const { currentTodo } = this.state;
-    const obj = {
-      text: currentTodo,
-      status: "active"
-    };
-    this.setState({
-      todolist: [...this.state.todolist, obj],
-      currentTodo: ""
+      todolist: [...this.state.todolist, value]
     });
   };
 
   render() {
-    const { currentTodo } = this.state;
     return (
       <div className="todo-container">
         <Header />
         <Body />
-        <Footer
-          setCurrentTodo={this.setCurrentTodo}
-          onSave={this.onTodoSubmit}
-          value={currentTodo}
-        />
+        <Footer onSave={this.onTodoSubmit} />
       </div>
     );
   }
