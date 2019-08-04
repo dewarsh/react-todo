@@ -16,10 +16,11 @@ class App extends Component {
   };
 
   render() {
+    const { todolist } = this.state;
     return (
       <div className="todo-container">
         <Header />
-        <Body />
+        <Body todoList={todolist}/>
         <Footer onSave={this.onTodoSubmit} />
       </div>
     );
