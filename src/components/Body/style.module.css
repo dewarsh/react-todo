@@ -1,0 +1,18 @@
+.body-container {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+.empty-container {
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.empty-container-main-text {
+    font-size: 16px;
+    font-weight: 500;
+}
+.empty-container-sub-text {
+    font-size: 14px;
+}
