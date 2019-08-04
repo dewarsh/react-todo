@@ -1,0 +1,13 @@
+.headerContainer {
+        width: 552px;
+        height: 96px;
+        background: #DAE0FB;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        padding: 18px 32px;
+}
+.headerText {
+    font-size: 60px;
+    font-weight: 500;
+    color: #000000;
+}
