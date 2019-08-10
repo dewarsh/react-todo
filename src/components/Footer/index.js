@@ -5,6 +5,7 @@ class Footer extends Component {
   state= {
     currentTodo: ""
   }
+  id = 0;
 
   setCurrentTodo = e => {
     this.setState({
@@ -16,9 +17,11 @@ class Footer extends Component {
     const { currentTodo } = this.state;
     const { onSave } = this.props;
     const obj = {
+      id: this.id,
       text: currentTodo,
-      status: "active"
+      isCompleted: false
     };
+    this.id++;
     onSave(obj);
     this.setState({
       currentTodo: ""

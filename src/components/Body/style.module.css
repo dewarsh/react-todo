@@ -25,6 +25,7 @@
     font-size: 20px;
     padding: 15px 0;
     margin-left: 15px;
+    margin-right: 18px;
   }
   .toggle {
     appearance: none;
@@ -44,7 +45,18 @@
       background-repeat: no-repeat;
       background-position: center left;
   }
-  
+  .todo-complete {
+    background: url(../../assets/images/checked_checkbox.svg);
+    background-repeat: no-repeat;
+    background-position: center left;
+    text-decoration: line-through;
+    color: #80808090;
+  }
+
+  .todoDelete {
+      float: right;
+      cursor: pointer;
+  }
   /* Scrollbar related css */
   /* width */
   ::-webkit-scrollbar {
@@ -66,4 +78,3 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #ebeef2;
   }
-  
