@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styles from "./style.module.css";
 
+
 class Footer extends Component {
   state= {
     currentTodo: ""
@@ -16,6 +17,9 @@ class Footer extends Component {
   onTodoSave = () => {
     const { currentTodo } = this.state;
     const { onSave } = this.props;
+    if(currentTodo.trim().length === 0){
+      return
+    }
     const obj = {
       id: this.id,
       text: currentTodo,
@@ -28,6 +32,14 @@ class Footer extends Component {
     })
   }
 
+  onKeyDown = e => {
+    if(e.keyCode !== 13){
+      return;
+    }
+    e.preventDefault(); //To stop the default functionality of enter button which is submit
+    this.onTodoSave();
+  }
+
   render() {
     const { currentTodo } = this.state;
     return (
@@ -38,6 +50,7 @@ class Footer extends Component {
           className={styles.todoInput}
           placeholder="Add new task..."
           onChange={e => this.setCurrentTodo(e)}
+          onKeyDown={this.onKeyDown}
         />
         <button
           className={styles.todoSubmitButton}

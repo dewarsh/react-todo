@@ -31,7 +31,6 @@ class App extends Component {
 
   onDeleteTodo = id => {
     const { todolist } = this.state;
-    console.log(id)
     const tempTodo = todolist.filter(todo => todo.id !== id);
     this.setState({
       todolist: tempTodo
