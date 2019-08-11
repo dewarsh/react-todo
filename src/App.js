@@ -6,7 +6,8 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    todolist: []
+    todolist: [],
+    currentFilter: "All tasks"
   };
 
   onTodoSubmit = value => {
@@ -34,15 +35,36 @@ class App extends Component {
     const tempTodo = todolist.filter(todo => todo.id !== id);
     this.setState({
       todolist: tempTodo
-    })
-  }
+    });
+  };
+
+  onTodoFilter = e => {
+    this.setState({
+      currentFilter: e.target.value
+    });
+  };
 
   render() {
-    const { todolist } = this.state;
+    const { todolist, currentFilter } = this.state;
+    const completedTodo = todolist.filter(todo => todo.isCompleted);
+    const activeTodo = todolist.filter(todo => !todo.isCompleted);
+    const filteredTodo =
+      currentFilter === "All tasks"
+        ? todolist
+        : currentFilter === "Completed"
+        ? completedTodo
+        : activeTodo;
     return (
       <div className="todo-container">
-        <Header />
-        <Body todoList={todolist} onToggle={this.onTodoToggle} onDelete={this.onDeleteTodo}/>
+        <Header
+          isFilterVisible={todolist.length > 0}
+          onFilterToggle={this.onTodoFilter}
+        />
+        <Body
+          todoList={filteredTodo}
+          onToggle={this.onTodoToggle}
+          onDelete={this.onDeleteTodo}
+        />
         <Footer onSave={this.onTodoSubmit} />
       </div>
     );

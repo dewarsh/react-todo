@@ -1,13 +1,27 @@
 .header-container {
-        width: 552px;
-        height: 96px;
-        background: #DAE0FB;
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
-        padding: 18px 32px;
+    width: 552px;
+    height: 96px;
+    background: #DAE0FB;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    padding: 18px 32px;
 }
 .header-text {
-    font-size: 48px;
-    font-weight: 500;
-    color: #000000;
+font-size: 48px;
+font-weight: 500;
+color: #000000;
+display: inline-block;
+}
+.select-task {
+display: inline-block;
+width: 164px;
+height: 48px;
+border-radius: 24px;
+outline: 0;
+border: none;
+font-size: 16px;
+color: #8499F0;
+padding: 13px 18px;
+vertical-align: text-bottom;
+margin-left: 196px;
 }
